@@ -18,9 +18,11 @@ module.exports = function (app) {
         first_name: 'Hello',
         last_name: 'World'
       }
-    ])
-  })
-};
+    ]
+  }).then(function(dbkcl6miep2uulocar) {
+      res.json(dbkcl6miep2uulocar);
+    });
+ 
 
 app.post("/api/students", function(req, res) {
     console.log(req.body);
@@ -28,3 +30,5 @@ app.post("/api/students", function(req, res) {
       res.json(dbkcl6miep2uulocar);
     });
   });
+
+ };

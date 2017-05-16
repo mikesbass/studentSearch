@@ -19,15 +19,15 @@ module.exports = function (app) {
         last_name: 'World'
       }
     ]
-  }).then(function(dbkcl6miep2uulocar) {
+  }).then(function(dbStudent) {
       res.json(dbkcl6miep2uulocar);
     });
  
 
 app.post("/api/students", function(req, res) {
     console.log(req.body);
-    db.kcl6miep2uulocar.create(req.body).then(function(dbkcl6miep2uulocar) {
-      res.json(dbkcl6miep2uulocar);
+    db.Student.create(req.body).then(function(dbStudent) {
+      res.json(dbStudent);
     });
   });
 

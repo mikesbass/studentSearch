@@ -15,8 +15,8 @@ module.exports = function (app) {
   app.get('/api/students', function (req, res) {
     res.json([
       {
-        firstName: 'Hello',
-        lastName: 'World'
+        first_name: 'Hello',
+        last_name: 'World'
       }
     ])
   })

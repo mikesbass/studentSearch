@@ -24,7 +24,7 @@ module.exports = function (app) {
 
 app.post("/api/students", function(req, res) {
     console.log(req.body);
-    db.kcl6miep2uulocar.create(req.body).then(function(db) {
+    db.kcl6miep2uulocar.create(req.body).then(function(dbkcl6miep2uulocar) {
       res.json(dbkcl6miep2uulocar);
     });
   });

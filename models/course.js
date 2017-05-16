@@ -1,6 +1,8 @@
+var Sequelize = require('sequelize');
+
 module.exports = function(sequelize, DataTypes) {
   var Course = sequelize.define("Course", {
-    name: {
+    instructor: {
       type: DataTypes.STRING,
       allowNull: false
     },

@@ -13,14 +13,19 @@ module.exports = {
       }], {});
     */
     return queryInterface.bulkInsert('Courses', [{
-      name: 'Express',
-      subject: 'JavaScript'
+      name: 'Prof X',
+      subject: 'Discipline'
     }, {
-      name: 'Javascript',
-      subject: 'programming'
-    }, {
-      name: 'John Doe',
-      subject: 'unknown'
+      name: 'Storm',
+      subject: 'Team Work'
+    }, 
+      {
+      name: 'Wolverine',
+      subject: 'Team Work'
+    }, 
+    {
+      name: 'Rogue',
+      subject: 'Power Control'
     }], {});
   },
 

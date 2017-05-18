@@ -33,7 +33,8 @@ module.exports = function (app) {
 app.post("/api/students", function(req, res) {
     // console.log(req.body);
     db.Student.create(req.body).then(function(dbStudent) {
-      res.json(dbStudent);
+      res.redirect("/");
+      // res.json(dbStudent);
     });
   });
 

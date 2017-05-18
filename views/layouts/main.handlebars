@@ -1,14 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Student Search</title>
-    <script src="/assets/scripts/example.js"></script>
-    <link rel="stylesheet" href="/assets/styles/style.css" type="text/css"/>
-</head>
-	<body>
 
-		{{{ body }}}
-		
-	</body>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>School for Gifted</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/scripts/example.js"></script>
+    <!--moment.js package-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <link rel="stylesheet" href="../assets/styles/style.css" type="text/css"/>
+</head>
+
+<body>
+        <br>
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="text-center">Xavier School for the Gifted</h1>
+        </div>
+
+        <div class="container">    
+	        <div class="row">
+	            <div class="col-md-8">
+	                <div class="panel panel-default" id="bodyBox">
+	                    <div class="panel-heading">
+	                        <h3 class="panel-title">Student Info</h3>
+	                    </div>
+	                    
+	                    {{{ body }}}
+	                </div>
+	            </div>  
+	        </div>
+        
+         <div class="row">
+   
+        <div id="addStudent" class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add Student</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" method="POST" action="/api/students">
+                        <div class="form-group">
+                            <label for="name-input">First Name:</label>
+                            <input class="form-control" id="first-input" name="first_name" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="name-input">Last Name</label>
+                            <input class="form-control" id="last-input" name="last_name" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-input">Email</label>
+                            <input class="form-control" id="email-input" name="student_email" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-input">Gender</label>
+                            <input class="form-control" id="gender-input" name="gender" type="text">
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-input">Hero Name</label>
+                            <input class="form-control" id="hero-input" name="hero_name" type="text">
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-input">Power</label>
+                            <input class="form-control" id="power-input" name="power" type="text">
+                            </textarea>
+                        </div>
+                        <button class="btn btn-default" id="add-student" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+</body>
 
 </html>
+

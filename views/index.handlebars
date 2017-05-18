@@ -1,31 +1,39 @@
-
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>First</th>
-            <th>Last</th>
-            <th>Email</th>
-            <th>Gender</th>
-            <th>Hero Name</th>
-            <th>Power</th>
-        </tr>
-    </thead>
-    <tbody>
+<h1>Current Students</h1>
+<ul>
     {{#each students}}
-        <tr>
-            <td>{{this.id}}</td>
-            <td>{{this.first_name}}</td>
-            <td>{{this.last_name}}</td>
-            <td>{{this.student_email}}</td>
-            <td>{{this.gender}}</td>
-            <td>{{this.hero_name}}</td>
-            <td>{{this.power}}</td>
-        </tr>       
-  	{{/each}}
-    </tbody>
-</table>
-   
+        <li>{{this.first_name}}</li>
+        <li>{{this.last_name}}</li>
+        <li>{{this.hero_name}}</li>
+        <li>{{this.power}}</li>
+    {{/each}}
+</ul>
 
+<h1>Current Students</h1>
 
+<ul>
+  {{#each student}}
+    <li>
+      <p>
+        {{this.id}}. {{this.student}}
 
+        <form action="/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit">Delete</button>
+        </form>
+      </p>
+    </li>
+  {{/each}}
+</ul>
+
+<h2>Add a Movie to Watch</h2>
+<form method="POST" action="/" class="button-size">
+	<textarea type="text" name="movie"></textarea>
+	<button type="submit">Save Movie!</button>
+</form>
+
+<h2>Update a Movie</h2>
+<form action="/?_method=PUT" method="POST" class="button-size">
+  <input type="text" name="id" placeholder="id">
+	<textarea type="text" name="movie" placeholder="what do you want to update this movie title to?"></textarea>
+	<button type="submit">Update Movie!</button>
+</form>

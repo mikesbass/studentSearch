@@ -14,11 +14,11 @@ html {
 .panel-title {
 	font-size: 25px;
 	font-weight: bold;
-	color: #e6e600;
+	color: #900C3F;
 }
 
 .jumbotron{
-	color: #e6e600;
+	color: #900C3F;
 	padding-top: 1%;
 	background-color:transparent !important;
 }
@@ -34,6 +34,7 @@ html {
 	font-size: 17px;
 	margin-left: 3%;
 	float: left;
+	color: #900C3F  
 }
 
 #addStudent {

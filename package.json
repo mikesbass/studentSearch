@@ -1,7 +1,7 @@
 {
   "name": "15.2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project 2:  Node , ExpressWebServer, MySQL, ORM, Routes, SEO, Testing, MVC, Handlebars, etc...",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +16,14 @@
     "express-handlebars": "^3.0.0",
     "mysql": "^2.13.0",
     "sequelize": "^3.30.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikesbass/studentSearch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikesbass/studentSearch/issues"
+  },
+  "homepage": "https://github.com/mikesbass/studentSearch#readme"
 }

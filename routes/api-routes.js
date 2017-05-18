@@ -20,7 +20,7 @@ module.exports = function (app) {
   });
 
   app.get("/api/students/:id", function(req, res) {
-     // Find one Author with the id in req.params.id and return them to the user with res.json
+     // Find one Student with the id in req.params.id and return them to the user with res.json
     db.Student.findOne({
       where: {
         id: req.params.id
@@ -31,7 +31,7 @@ module.exports = function (app) {
   });
  
 app.post("/api/students", function(req, res) {
-    console.log(req.body);
+    // console.log(req.body);
     db.Student.create(req.body).then(function(dbStudent) {
       res.json(dbStudent);
     });

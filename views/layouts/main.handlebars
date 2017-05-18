@@ -47,7 +47,7 @@
         <div class="container">       
             <div class="col-md-8">
                 <div class="panel panel-default" id="bodyBox">
-                    <div class="panel-heading">
+                    <div class="panel-heading" id="headerbkgrd">
                         <h3 class="panel-title">Student Info</h3>
                     </div>
                     {{{ body }}}
@@ -59,36 +59,30 @@
    
         <div id="addStudent" class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading"  id="headerbkgrd">
                     <h3 class="panel-title">Add Student</h3>
                 </div>
                 <div class="panel-body">
                     <form role="form" method="POST" action="/api/students">
                         <div class="form-group">
-                            <label for="name-input">First Name:</label>
-                            <input class="form-control" id="first-input" name="first_name" type="text">
+                            <input class="form-control" id="first-input" name="first_name" placeholder="First Name" type="text">
                         </div>
                         <div class="form-group">
-                            <label for="name-input">Last Name</label>
-                            <input class="form-control" id="last-input" name="last_name" type="text">
+                            <input class="form-control" id="last-input" name="last_name" placeholder="Last Name" type="text">
                         </div>
                         <div class="form-group">
-                            <label for="comment-input">Email</label>
-                            <input class="form-control" id="email-input" name="student_email" type="text">
+                            <input class="form-control" id="email-input" name="student_email" placeholder="Email" type="text">
                         </div>
                         <div class="form-group">
-                            <label for="comment-input">Gender</label>
-                            <input class="form-control" id="gender-input" name="gender" type="text">
+                            <input class="form-control" id="gender-input" name="gender" placeholder="Gender" type="text">
                             </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="comment-input">Hero Name</label>
-                            <input class="form-control" id="hero-input" name="hero_name" type="text">
+                            <input class="form-control" id="hero-input" name="hero_name" placeholder="Hero Name" type="text">
                             </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="comment-input">Power</label>
-                            <input class="form-control" id="power-input" name="power" type="text">
+                            <input class="form-control" id="power-input" name="power" placeholder="Power" type="text">
                             </textarea>
                         </div>
                         <button class="btn btn-default" id="submitStudent" type="submit">Submit</button>

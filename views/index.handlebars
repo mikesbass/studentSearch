@@ -1,9 +1,31 @@
-<h1>TODO: List all students with COURSES</h1>
-<ul>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Hero Name</th>
+            <th>Power</th>
+        </tr>
+    </thead>
+    <tbody>
     {{#each students}}
-        <li>{{this.first_name}}</li>
-        <li>{{this.last_name}}</li>
-        <li>{{this.hero_name}}</li>
-        <li>{{this.power}}</li>
-    {{/each}}
-</ul>
+        <tr>
+            <td>{{this.id}}</td>
+            <td><a href="http://localhost:8080/student/{{this.id}}"">{{this.first_name}}</a></td>
+            <td>{{this.last_name}}</td>
+            <td>{{this.student_email}}</td>
+            <td>{{this.gender}}</td>
+            <td>{{this.hero_name}}</td>
+            <td>{{this.power}}</td>
+        </tr>       
+  	{{/each}}
+    </tbody>
+</table>
+   
+
+
+

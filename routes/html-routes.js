@@ -15,8 +15,10 @@ module.exports = function(app) {
   // index route loads index.html
   app.get("/", function(req, res) {
     db.Student.findAll({}).then(function (students) {
-      res.render("index", { students: students });
+      res.render("index", { students: students })      
     })
   });
+
+  
 
 };

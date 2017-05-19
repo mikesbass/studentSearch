@@ -22,7 +22,7 @@ html {
     color: #900C3F;
     padding-top: 1%;
     background-color: transparent !important;
-    text-shadow: 3px 3px 3px #ccccb3;
+    text-shadow: 1px 1px 1px #fff;
 }
 
 .container {
@@ -37,6 +37,11 @@ html {
     margin-left: 3%;
     float: left;
     color: #900C3F
+}
+
+.courseBox {
+	justify-content: center;
+	text-align: center; 
 }
 
 #addStudent {
@@ -68,4 +73,14 @@ html {
 
 #headerbkgrd {
     background-color: #d6d6c2;
+}
+
+#coursesHeader {
+	font-size: 17px; 
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+}	
+
+#quote {
+	text-align: center;
 }

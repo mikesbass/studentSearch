@@ -11,6 +11,15 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   }, {
+    classMethods: {
+      associate: function(models) {
+        Course.belongsToMany(models.Student, 
+        {
+          through: models.StudentCourses
+          
+        });
+      }
+    },
     timestamps: false
   });
   return Course;

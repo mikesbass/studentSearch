@@ -28,7 +28,17 @@ module.exports = function(sequelize, DataTypes) {
     }
     
   }, {
-    timestamps: false
+    timestamps: false,
+    classMethods: {
+      associate: function(models) {
+        console.log('associate student to course');
+        Student.belongsToMany(models.Course, {
+          through: models.StudentCourses
+        });
+      }
+    }
   });
   return Student;
 };
+
+

@@ -19,6 +19,18 @@ module.exports = function(app) {
     })
   });
 
-  
-
-};
+  app.get('/student/:studentId', function (req, res, next) {
+  db.Student.findAll({
+    where: { id: req.params.studentId },
+    include: [{
+      model: db.Course,
+      through: {
+        attributes: ['instructor', 'subject']
+      },
+    }]
+  }).then(function (student) {
+  	console.log(student);
+  	res.render("search", { student: student }) 
+  }).catch(next);
+});
+}

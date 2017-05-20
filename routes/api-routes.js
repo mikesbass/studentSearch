@@ -48,16 +48,6 @@ app.get("/courses", function(req, res) {
 
   });
 
-// app.get("/StudentCourses", function(req, res) {
-//     //console.log(req.body);
-//     db.StudentCourse.create({
-//       CourseId: 1,
-//       StudentId: 1,
-//     }).then(function(results) {
-//       console.log("successful StudentCourses")
-//     });
-
-//   });
 
 
 
@@ -102,7 +92,7 @@ app.get("/MakeStudentCourse",function(req, res){
   
 
 
-app.get('/student/:studentId', function (req, res, next) {
+app.get('/api/student/:studentId', function (req, res, next) {
   db.Student.findAll({
     where: { id: req.params.studentId },
     include: [{
@@ -116,33 +106,7 @@ app.get('/student/:studentId', function (req, res, next) {
   }).catch(next);
 });
 }
-// courses = ['english', 'science', 'gym'];
-// for course in courses {
-//   console.log(course)
-// }
 
-//function(req, res) {app.get("/api/StudentsCourses/:firstName/:LastName", 
-    //console.log(req.body);
-    // db.Student.findOne({
-    //   where: {
-    //     first_name: req.params.firstName,
-    //     last_name: req.params.LastName
-
-    //   }.then(function(dbStudent){
-    //     console.log(dbStudent);
-    //     db.StudentsCourses.findAll({
-    //       where:{
-    //         Student_Id : dbStudent.id
-
-    //       }.then(function(dbCourse){
-    //         console.log(dbCourse);
-    //         res.json(dbCourse);
-    //       });
-    //     });
-
-    //   });
-    // });
-   // });
 
   
 

@@ -29,8 +29,11 @@ module.exports = function(app) {
       },
     }]
   }).then(function (student) {
-  	console.log(student);
-  	res.render("search", { student: student }) 
-  }).catch(next);
-});
+  	//console.log(student);
+    console.log(student);
+    res.status(200).json(student);
+    }).catch(next);
+  	//res.render("search", { student: student}) 
+  });
+
 }

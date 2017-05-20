@@ -1,4 +1,3 @@
-
 <table class="table table-hover">
     <thead>
         <tr>
@@ -9,23 +8,21 @@
             <th>Gender</th>
             <th>Hero Name</th>
             <th>Power</th>
+            <th>Courses</th>
         </tr>
     </thead>
     <tbody>
-    {{#each students}}
+    {{#each student}}
         <tr>
             <td>{{this.id}}</td>
-            <td><a href="/student/{{this.id}}"">{{this.first_name}}</a></td>
+            <td>{{this.first_name}}</td>
             <td>{{this.last_name}}</td>
             <td>{{this.student_email}}</td>
             <td>{{this.gender}}</td>
             <td>{{this.hero_name}}</td>
             <td>{{this.power}}</td>
+            <td>{{this.Courses.instructor}}</td>
         </tr>       
   	{{/each}}
     </tbody>
 </table>
-   
-
-
-

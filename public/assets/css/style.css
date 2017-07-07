@@ -84,3 +84,16 @@ html {
 #quote {
 	text-align: center;
 }
+
+.btn-link {
+    font-size: 120%;
+    margin-left: 2%;
+}
+
+.black {
+    margin-left: 2%;
+}
+
+#loginForm {
+    margin-left: 4%;
+}

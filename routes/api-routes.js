@@ -7,19 +7,20 @@
 
 // Requiring our models
 var db = require("../models");
-
+var express = require("express");
+var apiRouter = express.Router();
 // Routes
 // =============================================================
 module.exports = function(app) {
     // TODO: this should come from your db.Student.find({})
 
-    app.get("/api/students", function(req, res) {
+    apiRouter.get("/students", function(req, res) {
         db.Student.findAll({}).then(function(dbStudent) {
             res.json(dbStudent);
         });
     });
 
-    app.get("/api/students/:id", function(req, res) {
+    apiRouter.get("/students/:id", function(req, res) {
         // Find one Student with the id in req.params.id and return them to the user with res.json
         db.Student.findOne({
             where: {
@@ -30,7 +31,7 @@ module.exports = function(app) {
         });
     });
 
-    app.post("/api/students", function(req, res) {
+    apiRouter.post("/students", function(req, res) {
         // console.log(req.body);
         db.Student.create(req.body).then(function(dbStudent) {
             res.redirect("/");
@@ -39,3 +40,5 @@ module.exports = function(app) {
     });
 
 };
+// Export routes for server.js to use.
+module.exports = apiRouter;

@@ -25,7 +25,10 @@ var htmlRouter = express.Router();
         res.sendFile(path.join(__dirname, "../public/courses.html"));
     });
 
-
+    htmlRouter.get("/sign-out", function(req, res) {
+        res.clearCookie("jwtAuthToken");
+            res.redirect("/auth/login");
+    });
 
 // Export routes for server.js to use.
 module.exports = htmlRouter;

@@ -42,30 +42,30 @@ var apiRoutes = require("./routes/api-routes.js");
 var authRoutes = require("./routes/auth-routes.js");
 
 // API MIDDLEWARE
-// app.use("/api", jwtExp({ secret: tokenSecret }));
-app.use("/api", apiRoutes);
+ app.use("/api", jwtExp({ secret: tokenSecret }));
+ app.use("/api", apiRoutes);
 
 
 // AUTH MIDDLEWARE
-// app.use("/auth", authRoutes);
+ app.use("/auth", authRoutes);
 
 // USER MIDDLEWARE
-// app.get("/", jwtExp({
-//   secret: tokenSecret,
-//   getToken: function fromCookie(req) {
-//     if (req.signedCookies) {
-//       return req.signedCookies.jwtAuthToken;
-//     }
-//     return null;
-//   },
-//   credentialsRequired: false
-// }), function(req, res, next) {
-//   if (req.user) {
-//     next();
-//   } else {
-//     res.redirect("/auth/login");
-//   }
-// });
+ app.get("/", jwtExp({
+  secret: tokenSecret,
+   getToken: function fromCookie(req) {
+     if (req.signedCookies) {
+       return req.signedCookies.jwtAuthToken;
+     }
+     return null;
+   },
+   credentialsRequired: false
+ }), function(req, res, next) {
+   if (req.user) {
+     next();
+   } else {
+     res.redirect("/auth/login");
+   }
+ });
 
 app.use("/", htmlRoutes);
 

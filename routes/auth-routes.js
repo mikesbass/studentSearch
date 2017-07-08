@@ -76,10 +76,6 @@ authRouter.post("/login", function(req, res,  next) {
   }).catch(next);
 });
 
-//     authRouter.get("/sign-out", function(req, res) {
-//     res.clearCookie("jwtAuthToken");
-//     res.redirect("/auth/login");
-//  });
 
 
 

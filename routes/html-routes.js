@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var db = require("../models");
+var path = require('path');
 var express = require("express");
 var htmlRouter = express.Router();
 
@@ -20,42 +21,12 @@ var htmlRouter = express.Router();
         })
     });
 
-    htmlRouter.get("/students", function(req, res) {
-        db.Student.findAll({}).then(function(dbStudent) {
-            res.json(dbStudent);
-        });
-    });
-
-
     htmlRouter.get("/courses", function(req, res) {
-        db.Course.findAll({}).then(function(dbCourse) {
-            res.json(dbCourse);
-        });
+        res.sendFile(path.join(__dirname, "../public/courses.html"));
     });
 
-    htmlRouter.get("/students/:id", function(req, res) {
-        // Find one Student with the id in req.params.id and return them to the user with res.json
-        db.Student.findOne({
-            where: {
-                id: req.params.id
-            }
-        }).then(function(dbStudent) {
-            res.json(dbStudent);
-        });
-    });
 
-    htmlRouter.post("/students", function(req, res) {
-        // console.log(req.body);
-        db.Student.create(req.body).then(function(dbStudent) {
-            res.redirect("/");
-            // res.json(dbStudent);
-        });
-    });
-
-    htmlRouter.get("/sign-out", function(req, res) {
-  	res.clearCookie("jwtAuthToken");
-  	res.redirect("/auth/login");
-	});
 
 // Export routes for server.js to use.
 module.exports = htmlRouter;
+

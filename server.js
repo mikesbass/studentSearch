@@ -8,9 +8,9 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 var	methodOverride = require("method-override");
-	jwtExp = require("express-jwt");
-	tokenSecret = require("./tokensecret.js");
-	cookieParser = require("cookie-parser");
+const	jwtExp = require("express-jwt");
+const	tokenSecret = require("./tokensecret.js");
+const	cookieParser = require("cookie-parser");
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -38,34 +38,34 @@ app.use(methodOverride("_method"));
 // Routes =============================================================
 
 var htmlRoutes = require("./routes/html-routes.js");
-//var apiRoutes = require("./routes/api-routes.js");
+var apiRoutes = require("./routes/api-routes.js");
 var authRoutes = require("./routes/auth-routes.js");
 
 // API MIDDLEWARE
-app.use("/api", jwtExp({ secret: tokenSecret }));
-//app.use("/api", apiRoutes);
+// app.use("/api", jwtExp({ secret: tokenSecret }));
+app.use("/api", apiRoutes);
 
 
 // AUTH MIDDLEWARE
-app.use("/auth", authRoutes);
+// app.use("/auth", authRoutes);
 
 // USER MIDDLEWARE
-app.get("/", jwtExp({
-  secret: tokenSecret,
-  getToken: function fromCookie(req) {
-    if (req.signedCookies) {
-      return req.signedCookies.jwtAuthToken;
-    }
-    return null;
-  },
-  credentialsRequired: false
-}), function(req, res, next) {
-  if (req.user) {
-    next();
-  } else {
-    res.redirect("/auth/login");
-  }
-});
+// app.get("/", jwtExp({
+//   secret: tokenSecret,
+//   getToken: function fromCookie(req) {
+//     if (req.signedCookies) {
+//       return req.signedCookies.jwtAuthToken;
+//     }
+//     return null;
+//   },
+//   credentialsRequired: false
+// }), function(req, res, next) {
+//   if (req.user) {
+//     next();
+//   } else {
+//     res.redirect("/auth/login");
+//   }
+// });
 
 app.use("/", htmlRoutes);
 

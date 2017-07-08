@@ -38,12 +38,12 @@ app.use(methodOverride("_method"));
 // Routes =============================================================
 
 var htmlRoutes = require("./routes/html-routes.js");
-var apiRoutes = require("./routes/api-routes.js");
+//var apiRoutes = require("./routes/api-routes.js");
 var authRoutes = require("./routes/auth-routes.js");
 
 // API MIDDLEWARE
-// app.use("/api", jwtExp({ secret: tokenSecret }));
-app.use("/api", apiRoutes);
+app.use("/api", jwtExp({ secret: tokenSecret }));
+//app.use("/api", apiRoutes);
 
 
 // AUTH MIDDLEWARE

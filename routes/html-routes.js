@@ -26,6 +26,13 @@ var htmlRouter = express.Router();
         });
     });
 
+
+    htmlRouter.get("/courses", function(req, res) {
+        db.Course.findAll({}).then(function(dbCourse) {
+            res.json(dbCourse);
+        });
+    });
+
     htmlRouter.get("/students/:id", function(req, res) {
         // Find one Student with the id in req.params.id and return them to the user with res.json
         db.Student.findOne({

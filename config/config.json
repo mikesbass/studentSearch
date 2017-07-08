@@ -1,8 +1,8 @@
 {
     "development": {
     "username": "root",
-    "password": "$w33t",
-    "database": "studentSearch",
+    "password": "mysql1",
+    "database": "kcl6miep2uulocar",
     "host": "127.0.0.1",
     "dialect": "mysql"
     },

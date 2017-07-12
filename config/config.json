@@ -1,10 +1,12 @@
 {
     "development": {
-    "username": "root",
-    "password": "$w33t",
-    "database": "studentSearch",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+        "username": "oiv85hwrepothhwy",
+        "password": "a4iueg1xjr860bhd",
+        "database": "kcl6miep2uulocar",
+        "seederStorage": "sequelize",
+        "seederStorageTableName": "sequelize_data",
+        "host": "gzp0u91edhmxszwf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "dialect": "mysql"
     },
     "test": {
         "username": "root",

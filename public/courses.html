@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Courses page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+
+<body style="background-color: #eeeeee;">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/xmen-red-logo.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+                <p class="navbar-text" style="font-family: 'Cinzel Decorative', cursive; font-size: 20px; ">School for the Gifted</p>
+            </div>
+            <ul class="nav navbar-nav navbar-right" style="font-family: 'Roboto Mono', monospace; font-size: 15px;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Students</a></li>
+                <li class="active"><a href="#">Courses</a></li>
+                <li><a id="signOut" href="/sign-out">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="courseimg">
+                <img src="./assets/images/xmen-background.png" alt="XMEN" style="max-width:100%; max-height:100%;">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 well well-md" id="courseheader" style="background-color: #e6e6e6; margin-top: 20px; border-radius: 10px;">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <p style="font-family: 'Cinzel Decorative', cursive; font-size: 25px; margin: 0px; font-weight: bolder;">Student Search
+                        <span class="glyphicon glyphicon-user"></span></p>
+                </div>
+                <div class="col-md-8"></div>
+                <form>
+                    <div class="form-group">
+                        <label for="student"></label>
+                        <input type="student" class="form-control" id="email">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+    </div>
+</body>
+
+</html>

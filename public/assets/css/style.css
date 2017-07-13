@@ -1,0 +1,99 @@
+body {
+    background-size: 100%;
+    background: url('images/xmen1.jpg') no-repeat center center fixed;
+    background-size: cover !important;
+}
+
+body image {
+    width: 100%;
+}
+
+html {
+    width: 100%;
+}
+
+.panel-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #900C3F;
+}
+
+.jumbotron {
+    color: #900C3F;
+    padding-top: 1%;
+    background-color: transparent !important;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.container {
+    width: 100%;
+    margin-left: -1%;
+}
+
+#bodyBox {
+    width: 98%;
+    overflow: auto;
+    font-size: 17px;
+    margin-left: 3%;
+    float: left;
+    color: #900C3F
+}
+
+.courseBox {
+	justify-content: center;
+	text-align: center; 
+}
+
+#addStudent {
+    width: 30%;
+    float: left;
+    position: relative;
+    height: wrap-content;
+}
+
+#submitStudent {
+    background-color: #428bca !important;
+    color: #fff !important;
+    float: left;
+    margin-top: 10%;
+    margin-left: 37%;
+}
+
+#addStudent input {
+    background: #ffff80;
+    opacity: 0.98;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+#headerbkgrd {
+    background-color: #d6d6c2;
+}
+
+#coursesHeader {
+	font-size: 17px; 
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+}	
+
+#quote {
+	text-align: center;
+}
+
+.btn-link {
+    font-size: 120%;
+    margin-left: 2%;
+}
+
+.black {
+    margin-left: 2%;
+}
+
+#loginForm {
+    margin-left: 4%;
+}

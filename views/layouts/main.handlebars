@@ -1,95 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>School for Gifted</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/assets/scripts/example.js"></script>
-    <link rel="stylesheet" href="../assets/styles/style.css" type="text/css"/>
+    <title>School for the Gifted</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 </head>
 
-<body>
-
-
-        <br>
-        <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1 class="text-center">Xavier School for the Gifted</h1>
-            <h5 class="panel-title" id="quote">"Our differences make us powerful. Mistakes Can Be Costly"</h5>
+<body style="background-color: #eeeeee;">
+    
+    <div>
+        
+            <div class="col-md-2"></div>
+        </div>
+        
+        <div>
+            {{{ body }}}
         </div>
 
-    <div class="row">
-        <div class="container">       
-            <div class="col-md-8">
-                <div class="panel panel-default" id="bodyBox">
-                    <div class="panel-heading" id="headerbkgrd">
-                        <h3 class="panel-title">Student Info</h3>
-                    </div>
-                    {{{ body }}}
-                </div>
-            </div>  
-         
-        
-        
-   
-        <div id="addStudent" class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading"  id="headerbkgrd">
-                    <h3 class="panel-title">Add Student</h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form" method="POST" action="/api/students">
-                        <div class="form-group">
-                            <input class="form-control" id="first-input" name="first_name" placeholder="First Name" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="last-input" name="last_name" placeholder="Last Name" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="email-input" name="student_email" placeholder="Email" type="text">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="gender-input" name="gender" placeholder="Gender" type="text">
-                            </textarea>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="hero-input" name="hero_name" placeholder="Hero Name" type="text">
-                            </textarea>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" id="power-input" name="power" placeholder="Power" type="text">
-                            </textarea>
-                        </div>
-                        <div class="courseBox">
-                            <hr>
-                            <h3 class="panel-title" id="coursesHeader">Choose student courses.</h3>
-                            <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox1" value="option1"> Discipline
-                            </label>
-                            <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox2" value="option2"> Team Work
-                            </label>
-                            <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option3"> Battle
-                            </label>
-                            <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option3"> Support
-                            </label>
-                        </div>
-                        <div>
-                        <button class="btn btn-default" id="submitStudent" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
- 
-
+    <div class="col-md-2"></div>
+    </div>
+    </div>
 </body>
 
 </html>

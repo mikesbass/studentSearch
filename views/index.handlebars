@@ -1,4 +1,95 @@
-<table class="table table-hover">
+<!DOCTYPE html>
+<html lang="en">
+
+ <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/images/xmen-red-logo.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+                <p class="navbar-text" style="font-family: 'Cinzel Decorative', cursive; font-size: 20px; ">School for the Gifted</p>
+            </div>
+            <ul class="nav navbar-nav navbar-right" style="font-family: 'Roboto Mono', monospace; font-size: 15px;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Students</a></li>
+                <li class="active"><a href="#">Courses</a></li>
+                <li><a href="#">Sign-in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="courseimg">
+                <img src="../assets/images/xmen-background.png" alt="XMEN" style="max-width:100%; max-height:100%;">
+            </div>
+             </div>
+
+
+<body style="background-color: #eeeeee;">
+<div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 well well-md" id="courseheader" style="background-color: #e6e6e6; margin-top: 20px; border-radius: 10px;">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <p style="font-family: 'Cinzel Decorative', cursive; font-size: 25px; margin: 0px; font-weight: bolder;">Student Search
+                        <span class="glyphicon glyphicon-user"></span></p>
+                </div>
+                <div class="col-md-8"></div>
+                <form>
+                    <div class="form-group">
+                        <label for="student"></label>
+                        <input type="student" class="form-control" id="email">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 well well-md" id="courseheader" style="background-color: #e6e6e6; margin-top: 20px; border-radius: 10px;">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <p style="font-family: 'Cinzel Decorative', cursive; font-size: 25px; margin: 0px; font-weight: bolder;">Student Admission
+                        <span class="glyphicon glyphicon-user"></span></p>
+                </div>
+                <div class="col-md-8"></div>
+                <form role="form" method="POST" action="/students">
+                    <div class="form-group">
+                            <input class="form-control" id="first-input" name="first_name" placeholder="First Name" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="last-input" name="last_name" placeholder="Last Name" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="email-input" name="student_email" placeholder="Email" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="gender-input" name="gender" placeholder="Gender" type="text">
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="hero-input" name="hero_name" placeholder="Hero Name" type="text">
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="power-input" name="power" placeholder="Power" type="text">
+                            </textarea>
+                        </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 well well-md" id="courseheader" style="background-color: #e6e6e6; margin-top: 20px; border-radius: 10px;">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <p style="font-family: 'Cinzel Decorative', cursive; font-size: 25px; margin: 0px; font-weight: bolder;">Student Roster
+                        <span class="glyphicon glyphicon-user"></span></p>
+                </div>
+                <div class="panel panel-default" id="bodyBox">  
+                    <table class="table table-hover">
     <thead>
         <tr>
             <th>Id</th>
@@ -24,3 +115,18 @@
     {{/each}}
     </tbody>
 </table>
+                </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+    </div>
+
+    
+
+
+</body>
+   
+
+
+

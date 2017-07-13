@@ -13,27 +13,27 @@ const	tokenSecret = require("./tokensecret.js");
 const	cookieParser = require("cookie-parser");
 // Sets up the Express App
 // =============================================================
-var app = express();
+var apiRouter = express();
 var PORT = process.env.PORT || 8080;
 
 //cookie parser
-app.use(cookieParser(tokenSecret));
+apiRouter.use(cookieParser(tokenSecret));
 
 // Set Handlebars as the default templating engine.
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+apiRouter.engine("handlebars", exphbs({ defaultLayout: "main" }));
+apiRouter.set("view engine", "handlebars");
 
 // Requiring our models for syncing
 var db = require("./models");
 
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+apiRouter.use(bodyParser.json());
+apiRouter.use(bodyParser.urlencoded({ extended: true }));
+apiRouter.use(bodyParser.text());
+apiRouter.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
+apiRouter.use(methodOverride("_method"));
 
 // Routes =============================================================
 
@@ -42,15 +42,15 @@ var apiRoutes = require("./routes/api-routes.js");
 var authRoutes = require("./routes/auth-routes.js");
 
 // API MIDDLEWARE
- app.use("/api", jwtExp({ secret: tokenSecret }));
- app.use("/api", apiRoutes);
+ //app.use("/api", jwtExp({ secret: tokenSecret }));
+ apiRouter.use("/api", apiRoutes);
 
 
 // AUTH MIDDLEWARE
- app.use("/auth", authRoutes);
+ apiRouter.use("/auth", authRoutes);
 
 // USER MIDDLEWARE
- app.get("/", jwtExp({
+ apiRouter.get("/", jwtExp({
   secret: tokenSecret,
    getToken: function fromCookie(req) {
      if (req.signedCookies) {
@@ -67,15 +67,15 @@ var authRoutes = require("./routes/auth-routes.js");
    }
  });
 
-app.use("/", htmlRoutes);
+apiRouter.use("/", htmlRoutes);
 
-app.use(express.static("./public"));
+apiRouter.use(express.static("./public"));
 
 
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({}).then(function() {
-    app.listen(PORT, function() {
+    apiRouter.listen(PORT, function() {
         console.log("App listening on PORT " + PORT);
     });
 });

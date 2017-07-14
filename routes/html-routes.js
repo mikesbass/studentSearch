@@ -21,8 +21,10 @@ var htmlRouter = express.Router();
         })
     });
 
-    htmlRouter.get("/courses", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/courses.html"));
+     htmlRouter.get("/courses", function(req, res) {
+        db.Course.findAll({}).then(function(courses) {
+            res.render("courses", { courses: courses });
+        })
     });
 
     htmlRouter.get("/sign-out", function(req, res) {

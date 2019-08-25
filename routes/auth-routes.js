@@ -1,5 +1,5 @@
 var db = require("../models");
-var bcrypt = require("bcrypt");
+var bcrypt = require("bcrypt-nodejs");
 var jwt = require("jsonwebtoken");
 var express = require("express");
 var authRouter = express.Router();
